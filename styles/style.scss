@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;600&display=swap');
+@import 'variables';
+@import 'home';
+@import 'features';
+@import 'soon';
+@import 'footer';
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: $text-color-primary;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: 'Lobster', sans-serif;
+    font-weight: lighter;
+}
+
+h2 {
+    font-size: 5rem;
+    font-family: 'Lobster', sans-serif;
+    font-weight: lighter;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+li {
+    font-size: 1.7rem;
+}
+
+a {
+    color: $text-color-primary;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 50%;
+    }
+
+    nav{
+
+        #logo {
+            flex: 1;
+            &::after {
+                top: -20px;                
+            }
+        }
+
+        ul {
+            li {
+                margin-left: 5rem;
+            }
+        }
+    }
+
+    .showcase {
+        grid-template-columns: 10% 1fr 10%;
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        img, h2, .info {
+            grid-column: 2/3;
+            text-align: center;
+        }
+    }
+
+    .features {
+        align-items: center;
+
+        h2 {
+            margin-top: 5rem;
+        }
+
+        .cards {
+            flex-direction: column;
+            width: 90%;
+
+            .card {
+                margin: 5rem 0rem;
+            }
+        }
+    }
+
+    .soon {
+        overflow: hidden;
+        img {
+            width: 60%;
+        }
+
+        h2 {
+            top: 17%;
+            font-size: 5rem;
+            text-align: center;
+        }
+    }
+
+    footer {
+        h1 {
+            flex: 1;
+        }
+    }
+}
+
